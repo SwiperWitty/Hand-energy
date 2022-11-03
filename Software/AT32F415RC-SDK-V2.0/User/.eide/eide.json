@@ -1,0 +1,433 @@
+{
+  "name": "Caven",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    ".eide/deps"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "API",
+        "files": [
+          {
+            "path": "../../../../MCU_LIB-Cloud-/API/API.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/API/Check_CRC16.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/API/DATA_Handle.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/API/Keyboard.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/API/libcollections.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/API/Time_Handle.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/API/Caven.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Base",
+        "files": [
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_ADC.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_Exist_GPIO.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_Flash.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_IIC.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_PWM.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_SPI.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_Sys_Time.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base_UART.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Base.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Base_AT32F415/Items.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "CMSIS",
+        "files": [
+          {
+            "path": "../CMSIS/arm_common_tables.h"
+          },
+          {
+            "path": "../CMSIS/arm_const_structs.h"
+          },
+          {
+            "path": "../CMSIS/arm_helium_utils.h"
+          },
+          {
+            "path": "../CMSIS/arm_math.h"
+          },
+          {
+            "path": "../CMSIS/arm_mve_tables.h"
+          },
+          {
+            "path": "../CMSIS/arm_vec_math.h"
+          },
+          {
+            "path": "../CMSIS/cmsis_armcc.h"
+          },
+          {
+            "path": "../CMSIS/cmsis_armclang.h"
+          },
+          {
+            "path": "../CMSIS/cmsis_armclang_ltm.h"
+          },
+          {
+            "path": "../CMSIS/cmsis_compiler.h"
+          },
+          {
+            "path": "../CMSIS/cmsis_gcc.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Config",
+        "files": [
+          {
+            "path": "../Config/at32f415_clock.c"
+          },
+          {
+            "path": "../Config/at32f415_int.c"
+          },
+          {
+            "path": "../Config/system_at32f415.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Mode",
+        "files": [
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/BZZ.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/Control_Mode.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/HC138.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/HC595.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/key.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/lcd.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/LED.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/mlx90614.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/MODE_Motor.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/MODE_MP3.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/MODE_Time.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/MODE_Tracing.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/MODE_UART.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/MODE_Ultrasonic.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/Mode.c"
+          },
+          {
+            "path": "../../../../MCU_LIB-Cloud-/Mode/Steering_engine.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "SDK",
+        "files": [
+          {
+            "path": "../SDK/src/at32f415_adc.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_can.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_cmp.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_crc.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_crm.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_debug.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_dma.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_ertc.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_exint.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_flash.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_gpio.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_i2c.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_misc.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_pwc.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_sdio.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_spi.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_tmr.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_usart.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_usb.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_wdt.c"
+          },
+          {
+            "path": "../SDK/src/at32f415_wwdt.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Startup",
+        "files": [
+          {
+            "path": "../Startup/mdk/startup_at32f415.s"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "User",
+        "files": [
+          {
+            "path": "Main.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": ".pack/ArteryTek/AT32F415_DFP.2.0.7",
+  "miscInfo": {
+    "uid": "888582f875ddb26f72c1b510cf62638b"
+  },
+  "targets": {
+    "TEST": {
+      "excludeList": [],
+      "toolchain": "AC5",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "<YOUR_LINKER_SCRIPT>.lds",
+        "useCustomScatterFile": false,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x8000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x40000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "null",
+          "cpuName": "null"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".",
+          "../CMSIS",
+          "../Config",
+          "../SDK/inc",
+          "../SDK/src",
+          "../Startup/mdk",
+          "../../../../MCU_LIB-Cloud-/Base_AT32F415",
+          "../../../../MCU_LIB-Cloud-/Mode",
+          "../../../../MCU_LIB-Cloud-/API",
+          "RTE/_TEST"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": [
+          "AT32F415RCT7",
+          "USE_STDPERIPH_DRIVER",
+          "AT_START_F415_V1"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}

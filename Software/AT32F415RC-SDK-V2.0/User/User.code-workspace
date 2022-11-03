@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "base_sys_time.h": "c",
+            "mode_time.h": "c"
+        }
+    },
+    "extensions": {}
+}

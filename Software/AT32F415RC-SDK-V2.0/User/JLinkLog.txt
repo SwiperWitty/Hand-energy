@@ -1,0 +1,77 @@
+T515C 010:517.660   SEGGER J-Link V6.86 Log File
+T515C 010:517.699   DLL Compiled: Sep 24 2020 17:31:31
+T515C 010:517.703   Logging started @ 2022-09-29 06:15
+T515C 010:517.706 - 13.618ms
+T515C 010:517.711 JLINK_SetWarnOutHandler(...)
+T515C 010:517.714 - 0.004ms
+T515C 010:517.718 JLINK_OpenEx(...)
+T515C 010:518.782   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T515C 010:518.903   Decompressing FW timestamp took 107 us
+T515C 010:524.682   Hardware: V9.50
+T515C 010:524.694   S/N: 59525105
+T515C 010:524.698   OEM: SEGGER
+T515C 010:524.702   Feature(s): JFlash, GDB, RDI, FlashBP, FlashDL
+T515C 010:525.556   TELNET listener socket opened on port 19021
+T515C 010:528.096   WEBSRV Starting webserver
+T515C 010:528.181   WEBSRV Webserver running on local port 19080
+T515C 010:528.188 - 10.471ms returns "O.K."
+T515C 010:528.196 JLINK_GetEmuCaps()
+T515C 010:528.200 - 0.004ms returns 0xB9FF7BBF
+T515C 010:528.206 JLINK_TIF_GetAvailable(...)
+T515C 010:528.410 - 0.209ms
+T515C 010:528.420 JLINK_SetErrorOutHandler(...)
+T515C 010:528.423 - 0.004ms
+T515C 010:528.637 JLINK_ExecCommand("ProjectFile = "E:\WORK\Core-Caven32\Caven-V3.14-M4\AT32F415RC\V2.0_SDK\User\JLinkSettings.ini"", ...). 
+T515C 010:529.273 - 0.639ms returns 0x00
+T515C 010:529.286 JLINK_ExecCommand("Device = AT32F415RCT7", ...). 
+T515C 010:529.427   Looking for J-Link GUI Server exe at: D:\MDK\ARM\Segger\JLinkGUIServer.exe
+T515C 010:529.465   Looking for J-Link GUI Server exe at: C:\Program Files (x86)\SEGGER\JLink_V620h\\JLinkGUIServer.exe
+T515C 010:831.328   Failed to connect to J-Link GUI Server.
+T515C 043:835.518 - 0.237ms returns 0xFFFFFFFF
+T515C 043:835.618 JLINK_GetHardwareVersion()
+T515C 043:835.624 - 0.007ms returns 95000
+T515C 043:835.630 JLINK_GetDLLVersion()
+T515C 043:835.633 - 0.004ms returns 68600
+T515C 043:835.637 JLINK_GetOEMString(...)
+T515C 043:835.643 JLINK_GetFirmwareString(...)
+T515C 043:835.648 - 0.005ms
+T515C 043:835.655 JLINK_GetDLLVersion()
+T515C 043:835.657 - 0.004ms returns 68600
+T515C 043:835.661 JLINK_GetCompileDateTime()
+T515C 043:835.664 - 0.004ms
+T515C 043:835.669 JLINK_GetFirmwareString(...)
+T515C 043:835.672 - 0.004ms
+T515C 043:835.676 JLINK_GetHardwareVersion()
+T515C 043:835.679 - 0.004ms returns 95000
+T515C 043:835.683 JLINK_GetSN()
+T515C 043:835.686 - 0.004ms returns 59525105
+T515C 043:835.690 JLINK_GetOEMString(...)
+T515C 043:835.698 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T515C 043:836.335 - 0.643ms returns 0x00
+T515C 043:836.346 JLINK_HasError()
+T515C 043:836.351 JLINK_SetSpeed(5000)
+T515C 043:836.429 - 0.080ms
+T515C 043:836.620 JLINK_HasError()
+T515C 043:836.627 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T515C 043:836.630 - 0.004ms returns JLINKARM_RESET_TYPE_NORMAL
+T515C 043:836.635 JLINK_Reset()
+T515C 043:836.799   
+  ***** Error: 
+T515C 043:836.804   No CPU core or target device has been selected. Please make sure at least the core J-Link shall connect to, is selected.
+T515C 043:836.808 - 0.175ms
+T515C 043:836.816 JLINK_GetId()
+T515C 043:836.951   
+  ***** Error: 
+T515C 043:836.956   No CPU core or target device has been selected. Please make sure at least the core J-Link shall connect to, is selected.
+T515C 043:836.960 - 0.145ms returns 0x00000000
+T515C 043:836.966 JLINK_GetId()
+T515C 043:837.082   
+  ***** Error: 
+T515C 043:837.086   No CPU core or target device has been selected. Please make sure at least the core J-Link shall connect to, is selected.
+T515C 043:837.090 - 0.125ms returns 0x00000000
+T515C 043:837.807 JLINK_GetFirmwareString(...)
+T515C 043:837.813 - 0.007ms
+T515C 059:475.777 JLINK_Close()
+T515C 059:481.787 - 6.024ms
+T515C 059:481.802   
+T515C 059:481.805   Closed
