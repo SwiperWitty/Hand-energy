@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=NetP1_9 Pin=R4-1
+Removed Pin From Net: NetName=GND Pin=R4-2
+Removed Pin From Net: NetName=NetP1_2 Pin=R4-3
+Removed Pin From Net: NetName=GND Pin=R4-4
+Removed Pin From Net: NetName=CFG3 Pin=R4-5
+Removed Pin From Net: NetName=GND Pin=R4-6
+Removed Member From Class: ClassName=Sheet Member=R4
+Added Component: Designator=R?(RESC_0603_4)
+Added Pin To Net: NetName=GND Pin=R?-3
+Added Pin To Net: NetName=CFG3 Pin=R?-4
+Added Pin To Net: NetName=GND Pin=R?-5
+Added Pin To Net: NetName=NetP1_2 Pin=R?-6
+Added Pin To Net: NetName=GND Pin=R?-7
+Added Pin To Net: NetName=NetP1_9 Pin=R?-8
+Added Member To Class: ClassName=Sheet Member=Component Q1 MOS_N
+Added Member To Class: ClassName=Sheet Member=Component R8 10K
+Added Member To Class: ClassName=Sheet Member=Component R9 10K
+Added Member To Class: ClassName=Sheet Member=Component R? 10K
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=VCC Pin=LED2-2
+Removed Member From Class: ClassName=Sheet Member=C16
+Change Component Designator: OldDesignator=R7 NewDesignator=R8
+Change Component Designator: OldDesignator=R8 NewDesignator=R7
+Added Component: Designator=F1(FUSE_1206)
+Added Pin To Net: NetName=VCC Pin=F1-2
+Added Pin To Net: NetName=NetF1_1 Pin=F1-1
+Added Pin To Net: NetName=NetF1_1 Pin=LED2-2
+Added Net: Name=NetF1_1
+Added Member To Class: ClassName=Sheet Member=Component C11 100NF
+Added Member To Class: ClassName=Sheet2 Member=Component C13 4.7uF
+Added Member To Class: ClassName=Sheet2 Member=Component C14 4.7uF
+Added Member To Class: ClassName=Sheet2 Member=Component C15 100NF
+Added Member To Class: ClassName=Sheet Member=Component F1 FUSE
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

@@ -1,0 +1,12 @@
+Added Component: Designator=KEY1(KEY-K1-1502SA-LY-K3)
+Added Pin To Net: NetName=GND Pin=KEY1-1
+Added Pin To Net: NetName=KEY1 Pin=KEY1-2
+Added Pin To Net: NetName=KEY2 Pin=KEY1-3
+Added Pin To Net: NetName=KEY3 Pin=KEY1-4
+Added Member To Class: ClassName=Sheet Member=Component KEY1 KEY
+Added Member To Class: ClassName=Sheet Member=Component R9 10K
+Added Member To Class: ClassName=Sheet Member=Component R10 10K
+Added Member To Class: ClassName=Sheet2 Member=Component R12 6.8K
+Added Member To Class: ClassName=Sheet2 Member=Component R15 4.7K
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

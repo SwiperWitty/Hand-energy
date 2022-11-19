@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=LED Pin=LED3-2
+Removed Pin From Net: NetName=GND Pin=R9-2
+Removed Member From Class: ClassName=Sheet2 Member=C11
+Removed Member From Class: ClassName=Sheet Member=R11
+Change Component Footprint: Designator=LED3 Old Footprint=LED_0603_R New Footprint=WS2812B
+Change Component Comment : Designator=LED3 Old Comment=LED_R/G/B/Y New Comment=WS2812B
+Change Component Designator: OldDesignator=R10 NewDesignator=R9
+Change Component Designator: OldDesignator=R11 NewDesignator=R10
+Change Component Designator: OldDesignator=R12 NewDesignator=R11
+Change Component Designator: OldDesignator=R13 NewDesignator=R12
+Change Component Designator: OldDesignator=R14 NewDesignator=R13
+Change Component Designator: OldDesignator=R15 NewDesignator=R14
+Change Component Designator: OldDesignator=R16 NewDesignator=R15
+Added Pin To Net: NetName=VDD Pin=LED3-1
+Added Pin To Net: NetName=GND Pin=LED3-3
+Added Pin To Net: NetName=LED Pin=LED3-4
+Change Net Name : Old Net Name=NetR12_2 New Net Name=NetR11_2
+Change Net Name : Old Net Name=NetR13_2 New Net Name=NetR12_2
+Change Net Name : Old Net Name=NetR15_1 New Net Name=NetR14_1
+Added Member To Class: ClassName=Sheet2 Member=Component C12 4.7uF
+Added Member To Class: ClassName=Sheet2 Member=Component C14 100NF
+Added Member To Class: ClassName=Sheet2 Member=Component R12 6.8K
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

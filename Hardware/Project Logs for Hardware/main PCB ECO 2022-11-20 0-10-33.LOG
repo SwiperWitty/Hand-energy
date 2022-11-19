@@ -1,0 +1,44 @@
+Change Component Designator: OldDesignator=C12 NewDesignator=C11
+Change Component Designator: OldDesignator=C13 NewDesignator=C12
+Change Component Designator: OldDesignator=C14 NewDesignator=C13
+Change Component Designator: OldDesignator=R13 NewDesignator=R16
+Added Component: Designator=C14(CAP_0603)
+Added Component: Designator=C15(CAP_0603)
+Added Component: Designator=R13(RESC_0603_2)
+Added Component: Designator=R14(RESC_0603_2)
+Added Component: Designator=R15(RESC_0603_2)
+Added Component: Designator=RQ3(RESC_0603_2)
+Added Component: Designator=RQ4(RESC_0603_2)
+Added Component: Designator=U5(RESC_0603_1)
+Added Pin To Net: NetName=GND Pin=C14-1
+Added Pin To Net: NetName=GND Pin=C15-1
+Added Pin To Net: NetName=VDD Pin=R13-1
+Added Pin To Net: NetName=VCC Pin=RQ3-2
+Added Pin To Net: NetName=GND Pin=RQ4-1
+Added Pin To Net: NetName=GND Pin=U5-2
+Added Pin To Net: NetName=ADC_Temp Pin=C14-2
+Added Pin To Net: NetName=ADC_Temp Pin=MCU1-21
+Added Pin To Net: NetName=ADC_Temp Pin=R14-2
+Added Net: Name=ADC_Temp
+Added Pin To Net: NetName=ADC_Vol Pin=C15-2
+Added Pin To Net: NetName=ADC_Vol Pin=MCU1-20
+Added Pin To Net: NetName=ADC_Vol Pin=R15-2
+Added Net: Name=ADC_Vol
+Added Pin To Net: NetName=NetR13_2 Pin=R13-2
+Added Pin To Net: NetName=NetR13_2 Pin=R14-1
+Added Pin To Net: NetName=NetR13_2 Pin=U5-1
+Added Net: Name=NetR13_2
+Added Pin To Net: NetName=NetR15_1 Pin=R15-1
+Added Pin To Net: NetName=NetR15_1 Pin=RQ3-1
+Added Pin To Net: NetName=NetR15_1 Pin=RQ4-2
+Added Net: Name=NetR15_1
+Added Member To Class: ClassName=Sheet2 Member=Component C14 100NF
+Added Member To Class: ClassName=Sheet2 Member=Component C15 100NF
+Added Member To Class: ClassName=Sheet2 Member=Component R14 1K
+Added Member To Class: ClassName=Sheet2 Member=Component R15 1K
+Added Member To Class: ClassName=Sheet2 Member=Component R16 4.7K
+Added Member To Class: ClassName=Sheet2 Member=Component RQ3 10k
+Added Member To Class: ClassName=Sheet2 Member=Component RQ4 1.5k
+Added Member To Class: ClassName=Sheet2 Member=Component U5 Temper
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

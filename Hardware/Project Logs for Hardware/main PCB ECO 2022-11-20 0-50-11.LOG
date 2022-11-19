@@ -1,0 +1,11 @@
+Change Component Designator: OldDesignator=C11 NewDesignator=C12
+Change Component Designator: OldDesignator=C12 NewDesignator=C13
+Change Component Designator: OldDesignator=C13 NewDesignator=C14
+Change Component Designator: OldDesignator=C14 NewDesignator=C15
+Change Component Designator: OldDesignator=C15 NewDesignator=C16
+Added Component: Designator=C11(CAP_0603)
+Added Pin To Net: NetName=VDD Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Member To Class: ClassName=Sheet Member=Component C12 100NF
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

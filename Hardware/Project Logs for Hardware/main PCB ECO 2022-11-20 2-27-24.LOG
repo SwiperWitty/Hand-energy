@@ -1,0 +1,12 @@
+Removed Member From Class: ClassName=Sheet Member=C17
+Added Pin To Net: NetName=CFG3 Pin=MCU1-15
+Added Member To Class: ClassName=Sheet Member=Component C5 100NF
+Added Member To Class: ClassName=Sheet Member=Component C6 100NF
+Added Member To Class: ClassName=Sheet Member=Component C8 100NF
+Added Member To Class: ClassName=Sheet Member=Component C10 100NF
+Added Member To Class: ClassName=Sheet Member=Component C12 100NF
+Added Member To Class: ClassName=Sheet2 Member=Component C14 4.7uF
+Added Member To Class: ClassName=Sheet2 Member=Component C15 4.7uF
+Added Member To Class: ClassName=Sheet2 Member=Component C16 100NF
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

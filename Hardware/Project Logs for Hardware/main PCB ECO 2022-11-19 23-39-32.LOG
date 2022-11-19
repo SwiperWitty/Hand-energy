@@ -1,0 +1,13 @@
+Change Component Designator: OldDesignator=R8 NewDesignator=R9
+Change Component Designator: OldDesignator=R9 NewDesignator=R10
+Change Component Designator: OldDesignator=R10 NewDesignator=R11
+Change Component Designator: OldDesignator=R11 NewDesignator=R12
+Change Component Designator: OldDesignator=R12 NewDesignator=R13
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Added Component: Designator=R8(RESC_0603_2)
+Added Pin To Net: NetName=NetQ1_1 Pin=R8-1
+Added Pin To Net: NetName=GND Pin=R8-2
+Change Net Name : Old Net Name=NetR11_2 New Net Name=NetR12_2
+Added Member To Class: ClassName=Sheet Member=Component R11 10K
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

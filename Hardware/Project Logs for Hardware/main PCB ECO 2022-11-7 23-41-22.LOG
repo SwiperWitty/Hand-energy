@@ -1,0 +1,95 @@
+Removed Pin From Net: NetName=NetQ1_1 Pin=Q1-1
+Removed Pin From Net: NetName=VCC Pin=Q1-2
+Removed Pin From Net: NetName=GND Pin=Q3-2
+Removed Pin From Net: NetName=NetQ1_1 Pin=Q3-3
+Removed Pin From Net: NetName=NetQ1_1 Pin=R5-1
+Removed Pin From Net: NetName=VCC Pin=R5-2
+Removed Pin From Net: NetName=NetLED2_1 Pin=R6-1
+Removed Pin From Net: NetName=OUT Pin=R6-2
+Removed Pin From Net: NetName=PWM Pin=R7-2
+Removed Pin From Net: NetName=GND Pin=R8-1
+Removed Member From Class: ClassName=Sheet Member=Q2
+Removed Member From Class: ClassName=Sheet Member=Q3
+Change Component Footprint: Designator=J1 Old Footprint=XH2.54-WS-4P New Footprint=Header 2.54X4
+Change Component Comment : Designator=R5 Old Comment=10K New Comment=1K
+Change Component Comment : Designator=R6 Old Comment=10K New Comment=10¦¸
+Change Component Designator: OldDesignator=Q2 NewDesignator=Q1
+Change Component Designator: OldDesignator=R9 NewDesignator=R8
+Added Component: Designator=C13(CAP_0603)
+Added Component: Designator=C14(CAP_0603)
+Added Component: Designator=D2(DIODE_SOD123)
+Added Component: Designator=K1(KEY-A)
+Added Component: Designator=KEY1(KEY-K1-1502SA-LY-K3)
+Added Component: Designator=N1(SOT23_5)
+Added Component: Designator=P2(HDR1X2)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R9(RESC_0603_2)
+Added Component: Designator=R10(RESC_0603_2)
+Added Component: Designator=R11(RESC_0603_2)
+Added Component: Designator=R12(RESC_0603_2)
+Added Component: Designator=U4(LCD_Show)
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=VDD Pin=C13-2
+Added Pin To Net: NetName=GND Pin=C14-1
+Added Pin To Net: NetName=VDD Pin=D2-2
+Added Pin To Net: NetName=GND Pin=K1-1
+Added Pin To Net: NetName=RST Pin=K1-2
+Added Pin To Net: NetName=GND Pin=KEY1-1
+Added Pin To Net: NetName=IO_D1 Pin=MCU1-39
+Added Pin To Net: NetName=IO_D2 Pin=MCU1-40
+Added Pin To Net: NetName=VCC Pin=N1-1
+Added Pin To Net: NetName=GND Pin=N1-4
+Added Pin To Net: NetName=UART2_RX Pin=P2-1
+Added Pin To Net: NetName=UART2_TX Pin=P2-2
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=PWM Pin=R5-2
+Added Pin To Net: NetName=NetQ1_1 Pin=R6-1
+Added Pin To Net: NetName=NetLED2_1 Pin=R7-1
+Added Pin To Net: NetName=OUT Pin=R7-2
+Added Pin To Net: NetName=BOOT0 Pin=R9-1
+Added Pin To Net: NetName=GND Pin=R9-2
+Added Pin To Net: NetName=VDD Pin=R10-1
+Added Pin To Net: NetName=RST Pin=R10-2
+Added Pin To Net: NetName=GND Pin=R11-1
+Added Pin To Net: NetName=VDD Pin=R12-2
+Added Pin To Net: NetName=GND Pin=U4-1
+Added Pin To Net: NetName=VDD Pin=U4-3
+Added Pin To Net: NetName=VDD Pin=U4-4
+Added Pin To Net: NetName=GND Pin=U4-5
+Added Pin To Net: NetName=GND Pin=U4-6
+Added Pin To Net: NetName=D/C Pin=U4-7
+Added Pin To Net: NetName=NSS Pin=U4-8
+Added Pin To Net: NetName=SCLK Pin=U4-9
+Added Pin To Net: NetName=MOSI Pin=U4-10
+Added Pin To Net: NetName=GND Pin=U4-12
+Added Pin To Net: NetName=KEY1 Pin=KEY1-2
+Added Pin To Net: NetName=KEY1 Pin=MCU1-42
+Added Net: Name=KEY1
+Added Pin To Net: NetName=KEY2 Pin=MCU1-2
+Added Net: Name=KEY2
+Added Pin To Net: NetName=KEY3 Pin=MCU1-41
+Added Net: Name=KEY3
+Added Pin To Net: NetName=NetN1_3 Pin=N1-3
+Added Pin To Net: NetName=NetN1_3 Pin=R6-2
+Added Net: Name=NetN1_3
+Added Pin To Net: NetName=NetN1_5 Pin=N1-5
+Added Pin To Net: NetName=NetN1_5 Pin=R5-1
+Added Net: Name=NetN1_5
+Added Pin To Net: NetName=NetR11_2 Pin=R11-2
+Added Pin To Net: NetName=NetR11_2 Pin=U4-2
+Added Net: Name=NetR11_2
+Added Pin To Net: NetName=RES Pin=C14-2
+Added Pin To Net: NetName=RES Pin=D2-1
+Added Pin To Net: NetName=RES Pin=R12-1
+Added Pin To Net: NetName=RES Pin=U4-11
+Added Net: Name=RES
+Added Class: Name=Sheet2
+Added Member To Class: ClassName=Sheet Member=Component K1 KEY
+Added Member To Class: ClassName=Sheet Member=Component KEY1 KEY
+Added Member To Class: ClassName=Sheet Member=Component N1 U?
+Added Member To Class: ClassName=Sheet Member=Component P2 Header 2
+Added Member To Class: ClassName=Sheet Member=Component R10 10K
+Added Room: Name=Sheet2
+Added Room: Name=Sheet
