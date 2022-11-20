@@ -25,7 +25,7 @@ Base DP or QC power to Create heat !
 
 keyshot
 
-![image-20221121002221156](C:/Users/Witty-Q/AppData/Roaming/Typora/typora-user-images/image-20221121002221156.png)
+![image-20221121002221156](https://raw.githubusercontent.com/SwiperWitty/img/main/img/202211210027745.png)
 
 
 
