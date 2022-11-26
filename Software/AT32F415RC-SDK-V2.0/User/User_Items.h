@@ -13,13 +13,13 @@
 
 */
 #define TURE   TRUE
-#define DEBUG_OUT   1           //Debug 通道(目前是串口1)->MODE
+#define DEBUG_OUT   2           //Debug 通道(目前是串口1)->MODE
 #define MCU_SYS_Freq SystemCoreClock        //刚启动是8M，经过配置文件之后就是144（system_clock_config()之后）
 
                                                     /*  基本外设就能实现的功能    */
 #define Exist_SYS_TIME
-#define Exist_PWM
-#define Exist_ENCODE
+//#define Exist_PWM
+//#define Exist_ENCODE
 
 #define Exist_KEY
 #define Exist_LED
@@ -30,7 +30,7 @@
 
 #define Exist_UART
 //#define Exist_IIC
-#define Exist_SPI
+//#define Exist_SPI
 //#define Exist_CAN
 
 //#define Exist_FLASH
@@ -39,9 +39,9 @@
 #define Exist_LCD
 //#define Exist_OLED            //一般这两个是二选一（占用的都是SPI）
 
+#define Exist_DS18B20
 //#define Exist_HC138
 //#define Exist_HC595
-#define Exist_DS18B20
 
 //#define Exist_Ultrasonic          //超声波测距
 //#define Exist_FindLine            //循迹
@@ -49,7 +49,7 @@
 //#define Exist_Voice               //语音播报(MP3)
 
 //#define Exist_Motor               //电机
-//#define Exist_Steering_Engine       //舵机
+#define Exist_Steering_Engine       //舵机
 
 //#define Exist_MLX90614            //红外测温
 
