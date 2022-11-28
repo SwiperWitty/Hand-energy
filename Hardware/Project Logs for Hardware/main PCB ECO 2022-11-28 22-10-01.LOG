@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=COM1-0
+Removed Pin From Net: NetName=GND Pin=COM1-0
+Removed Pin From Net: NetName=GND Pin=COM1-0
+Removed Pin From Net: NetName=GND Pin=COM1-0
+Change Component Footprint: Designator=L1 Old Footprint=INDUCTANCE_NR New Footprint=INDUCTANCE_4*4
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

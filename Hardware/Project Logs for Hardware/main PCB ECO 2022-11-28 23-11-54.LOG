@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=DN Pin=P1-4
+Removed Pin From Net: NetName=DP Pin=P1-5
+Removed Member From Class: ClassName=Sheet Member=R14
+Added Pin To Net: NetName=DP Pin=P1-4
+Added Pin To Net: NetName=DN Pin=P1-5
+Added Member To Class: ClassName=Sheet Member=Component R6 10K
+Added Member To Class: ClassName=Sheet Member=Component R8 10¦¸
+Added Member To Class: ClassName=Sheet Member=Component R9 10K
+Added Member To Class: ClassName=Sheet Member=Component R10 10K
+Added Member To Class: ClassName=Sheet Member=Component R11 10K
+Added Member To Class: ClassName=Sheet2 Member=Component R13 30¦¸
+Added Member To Class: ClassName=Sheet2 Member=Component R15 1K
+Added Member To Class: ClassName=Sheet2 Member=Component R16 1K
+Added Room: Name=Sheet2
+Added Room: Name=Sheet

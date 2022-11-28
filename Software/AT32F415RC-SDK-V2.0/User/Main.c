@@ -37,6 +37,8 @@ int main (void)
 			{
 				Mode_User.LED.LED_SET(1,DISABLE);
 				printf("on hot \r\n");
+				temp_f = DS18B20_Get_Temp();
+				printf("temp : %5.2f \r\n",temp_f);
 			}
 			else
 			{
@@ -53,6 +55,7 @@ int main (void)
         }
         if(SYS_Time.Watch.second % 2)
         {
+
         }
         else
         {

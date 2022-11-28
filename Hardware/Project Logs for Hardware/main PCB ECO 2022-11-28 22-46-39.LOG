@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=GND Pin=R5-1
+Removed Pin From Net: NetName=GND Pin=R5-3
+Removed Pin From Net: NetName=NetP1_2 Pin=R5-4
+Removed Pin From Net: NetName=GND Pin=R5-5
+Removed Pin From Net: NetName=CFG3 Pin=R5-6
+Removed Member From Class: ClassName=Sheet Member=R13
+Change Component Footprint: Designator=R5 Old Footprint=RESC_0603_4 New Footprint=RESC_0603_2
+Change Component Designator: OldDesignator=R6 NewDesignator=R7
+Change Component Designator: OldDesignator=R7 NewDesignator=R8
+Change Component Designator: OldDesignator=R8 NewDesignator=R9
+Change Component Designator: OldDesignator=R9 NewDesignator=R10
+Change Component Designator: OldDesignator=R10 NewDesignator=R11
+Change Component Designator: OldDesignator=R11 NewDesignator=R12
+Change Component Designator: OldDesignator=R12 NewDesignator=R13
+Change Component Designator: OldDesignator=R13 NewDesignator=R14
+Change Component Designator: OldDesignator=R14 NewDesignator=R15
+Change Component Designator: OldDesignator=R15 NewDesignator=R16
+Change Component Designator: OldDesignator=R16 NewDesignator=R17
+Added Component: Designator=R6(RESC_0603_2)
+Added Pin To Net: NetName=GND Pin=P1-9
+Added Pin To Net: NetName=NetP1_2 Pin=R5-1
+Added Pin To Net: NetName=GND Pin=R5-2
+Added Pin To Net: NetName=CFG3 Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R6-2
+Change Net Name : Old Net Name=NetR12_2 New Net Name=NetR13_2
+Change Net Name : Old Net Name=NetR13_2 New Net Name=NetR14_2
+Change Net Name : Old Net Name=NetR15_1 New Net Name=NetR16_1
+Added Member To Class: ClassName=Sheet Member=Component R4 10K
+Added Member To Class: ClassName=Sheet Member=Component R7 1K
+Added Member To Class: ClassName=Sheet Member=Component R8 10¦¸
+Added Member To Class: ClassName=Sheet Member=Component R9 10K
+Added Member To Class: ClassName=Sheet Member=Component R10 10K
+Added Member To Class: ClassName=Sheet Member=Component R12 10K
+Added Member To Class: ClassName=Sheet2 Member=Component R14 6.8K
+Added Member To Class: ClassName=Sheet2 Member=Component R15 1K
+Added Member To Class: ClassName=Sheet2 Member=Component R17 4.7K
+Added Room: Name=Sheet2
+Added Room: Name=Sheet
