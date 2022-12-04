@@ -35,14 +35,22 @@ int main (void)
 			CV_UART[2]->Rxd_Received = 0;
 			if(CV_UART[2]->UART_RxdBuff[0] == '1')
 			{
-				Mode_User.LED.LED_SET(1,DISABLE);
+				Mode_User.LED.LED_SET(1,ENABLE);
+				User_hot_on();
 				printf("on hot \r\n");
-				temp_f = DS18B20_Get_Temp();
-				printf("temp : %5.2f \r\n",temp_f);
+
+			}
+			else if(CV_UART[2]->UART_RxdBuff[0] == 1)
+			{
+				temp_2 = 1;
 			}
 			else
 			{
-				Mode_User.LED.LED_SET(1,ENABLE);
+				temp_f = ADC_Get_Temperature();
+				printf("p: MCU_Temp %f \r\n",temp_f);
+				Mode_User.LED.LED_SET(1,DISABLE);
+				User_hot_off();
+				temp_2 = 0;
 				printf("off hot \r\n");
 			}
 			Mode_User.UART.Send_Data(2,CV_UART[2]->UART_RxdBuff,CV_UART[2]->DATA.Length);
@@ -53,37 +61,27 @@ int main (void)
         {
             temp = SYS_Time.Watch.second;
         }
-        if(SYS_Time.Watch.second % 2)
-        {
-
-        }
-        else
-        {
-        }
+		if(temp_2)
+		{
+			temp_f = DS18B20_Get_Temp();
+			printf("temp : %5.2f \r\n",temp_f);
+		}
         
         temp_1 ++;
         if(temp_1 > 100) 
         {temp_1 = 0;}
         
-        for(int a = 0;a < 100;a ++)
-        {
-            temp_String[a] = temp_1;
-        }
-        SPI_Send_String(temp_String,100);
-        
-        for(int a = 0;a < 100;a ++)
-        {
-            temp1_String[a] = temp_1 % 0x10;
-        }
-        SPI_Send_String(temp1_String,200);
-        
-        Mode_User.Delay.Delay_ms(10);
-        
-        
-//        TIM4_PWMx_SetValue(1,110);
-//        TIM4_PWMx_SetValue(2,110);
-        Mode_User.Delay.Delay_ms(20);
-        
+        Mode_User.Delay.Delay_ms(200);
+//        ADC_Get_List(temp_list);
+//		temp_f = temp_list[0];
+//		temp_f = temp_f / 4096 * VDDA;
+//		temp_f = temp_f * VCC_Cfc;
+//		printf("p: vcc : %f \r\n", temp_f);
+//		
+//		temp_f = 4096 - temp_list[1];
+//		temp_f = temp_f / 4096 * VDDA;
+//		printf("p: temp : %f \r\n", temp_f);
+//		printf("p: mcu : %f  \r\n\r\n", ADC_Get_Temperature());
     }
 }
 
@@ -95,24 +93,34 @@ void Main_Init(void)
     
     Mode_Init.Sys_Clock(ENABLE);
     Mode_Init.LED(ENABLE);
-
+	User_GPIO_Init(ENABLE);
+	
     Mode_Init.UART(2,115200,ENABLE);
 	Mode_Init.KEY(1,ENABLE); 
     Mode_Init.LCD(ENABLE); 
-    DS18B20_Init (ENABLE); 
+	if(DS18B20_Init (ENABLE) == 1)
+	{
+		printf("p: DS18B20_Init sec !\r\n");
+	}
+    else
+	{
+		printf("p: DS18B20_Init error !\r\n");
+	}
     
-    Mode_User.LED.LED_SET(1,ENABLE);
-	Mode_User.LED.LED_SET(2,DISABLE);		//12V
+    User_hot_off();		//hot
+	User_09V();		//12V
 	
-//    Mode_User.Steering_Engine.Set_Angle(1,90);
     Mode_User.Delay.Delay_ms(100);
-    Mode_User.LCD.Show_Picture(0,0,60,60,gImage_am_60);
-//    ADC_Start_Init(ENABLE);
+//    Mode_User.LCD.Show_Picture(0,0,239,240,gImage_kk);
+//	Mode_User.LCD.Show_String(0,12,"1-1234567890abcdefghijklmNOP",WHITE,BLACK,16);
 
+    ADC_Start_Init(ENABLE);
     Mode_User.Sys_Clock.Set_TIME(SYS_Time.Watch);
 
     Mode_User.UART.Send_String(2,"s: hello world !\r\n");
     printf("p: Nice to meet you > WQing !\r\n");
     printf("p: Created by Cavendish \r\n");
 
+	
+	printf("p: mcu : %f  \r\n\r\n", ADC_Get_Temperature());
 }
