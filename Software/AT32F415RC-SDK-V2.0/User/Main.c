@@ -18,6 +18,7 @@ U8 temp1_String[300];
 int temp_list[18];
 float temp_f;
 int i;
+char key_hot = 0;
 
 void Main_Init(void);
 int main (void)
@@ -66,22 +67,29 @@ int main (void)
 			temp_f = DS18B20_Get_Temp();
 			printf("temp : %5.2f \r\n",temp_f);
 		}
-        
+        if(KEY_R() == 0)
+		{
+			Mode_User.Delay.Delay_ms(20);
+			key_hot = !key_hot; 
+			while(KEY_R() == 0)
+			{
+				Mode_User.Delay.Delay_ms(10);
+			}
+		}
+		if(key_hot)
+		{
+			User_hot_on();
+		}
+		else
+		{
+			User_hot_off();
+		}
         temp_1 ++;
         if(temp_1 > 100) 
         {temp_1 = 0;}
         
-        Mode_User.Delay.Delay_ms(200);
-//        ADC_Get_List(temp_list);
-//		temp_f = temp_list[0];
-//		temp_f = temp_f / 4096 * VDDA;
-//		temp_f = temp_f * VCC_Cfc;
-//		printf("p: vcc : %f \r\n", temp_f);
-//		
-//		temp_f = 4096 - temp_list[1];
-//		temp_f = temp_f / 4096 * VDDA;
-//		printf("p: temp : %f \r\n", temp_f);
-//		printf("p: mcu : %f  \r\n\r\n", ADC_Get_Temperature());
+        Mode_User.Delay.Delay_ms(20);
+
     }
 }
 
@@ -109,18 +117,26 @@ void Main_Init(void)
     
     User_hot_off();		//hot
 	User_09V();		//12V
-	
+	struct Caven_Color Color;
+	Mode_User.LED.LED_REG(Color,DISABLE);
     Mode_User.Delay.Delay_ms(100);
-//    Mode_User.LCD.Show_Picture(0,0,239,240,gImage_kk);
+    Mode_User.LCD.Show_Picture(0,0,239,240,gImage_kk);
 //	Mode_User.LCD.Show_String(0,12,"1-1234567890abcdefghijklmNOP",WHITE,BLACK,16);
 
-    ADC_Start_Init(ENABLE);
+    ADC_Start_Init(ENABLE); 
     Mode_User.Sys_Clock.Set_TIME(SYS_Time.Watch);
 
     Mode_User.UART.Send_String(2,"s: hello world !\r\n");
-    printf("p: Nice to meet you > WQing !\r\n");
+    printf("p: Nice to meet you >  !\r\n");
     printf("p: Created by Cavendish \r\n");
-
 	
-	printf("p: mcu : %f  \r\n\r\n", ADC_Get_Temperature());
+	ADC_Get_List(temp_list);
+	temp_f = temp_list[0];
+	temp_f = temp_f / 4096 * VDDA;
+	temp_f = temp_f * VCC_Cfc;
+	printf("p: VCC : %f \r\n", temp_f);
+	temp_f = 4096 - temp_list[1];
+	temp_f = temp_f / 4096 * VDDA;
+	printf("p: TEMP : %f \r\n", temp_f);
+	printf("p: MCU : %f  \r\n\r\n", ADC_Get_Temperature());
 }
