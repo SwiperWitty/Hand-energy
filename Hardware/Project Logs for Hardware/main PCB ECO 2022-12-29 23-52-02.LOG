@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=D/C Pin=MCU1-43
+Added Member To Class: ClassName=Sheet2 Member=Component R15 1K
+Added Member To Class: ClassName=Sheet2 Member=Component R17 4.7K
+Added Member To Class: ClassName=Sheet2 Member=Component U4 Temper
+Added Member To Class: ClassName=Sheet2 Member=Component U5 OLED
+Added Room: Name=Sheet2
+Added Room: Name=Sheet
