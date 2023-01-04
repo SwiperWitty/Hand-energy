@@ -37,13 +37,13 @@
 #define IIC_SCL_H() GPIO_IIC->scr = IIC_SCL
 #define IIC_SCL_L() GPIO_IIC->clr = IIC_SCL
 
-#define IIC_SDA_IN() GPIO_IIC->idt & IIC_SDA        //读取引脚电平
+#define IIC_SDA_R() gpio_input_data_bit_read(GPIO_IIC,IIC_SDA)        //读取引脚电平
 #endif
 //
 
 void IIC_Start_Init(int SET);
 char IIC_Send_DATA(char Addr,const char *Data,char ACK,int Length,int Speed);
-char IIC_Receive_DATA(char Addr,const char *Data,char *Target,char ACK,int Length,int Speed);
+char IIC_Receive_DATA(char Addr, char *Target,char ACK,int Length,int Speed);
 
 
 

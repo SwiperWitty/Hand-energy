@@ -350,9 +350,11 @@ int fputc(int ch, FILE *f)      //printf
     #ifdef Exist_UART
 //    USART_SendData(USART1,(uint8_t)ch);
 //    while (!USART_GetFlagStatus(USART1, TXD_Falg));
-    UART_TXD_Send(1,(uint8_t)ch);
+    UART_TXD_Send(DEBUG_OUT,(uint8_t)ch);
     #endif
 #endif // DEBUG
     return (ch);
 }
+
+//你找中断？UART的中断权限给MODE了！
 

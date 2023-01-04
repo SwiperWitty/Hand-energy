@@ -1,5 +1,36 @@
 #include "Base_Exist_GPIO.h"
 
+void User_GPIO_Init(int Set)
+{
+	
+    gpio_init_type gpio_init_struct;
+    gpio_default_para_init(&gpio_init_struct);
+    if (Set) 
+    {
+		crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK,TRUE);
+		crm_periph_clock_enable(CRM_GPIOB_PERIPH_CLOCK,TRUE);
+        
+        gpio_init_struct.gpio_pins = GPIO_PINS_6;
+        gpio_init_struct.gpio_drive_strength = GPIO_DRIVE_STRENGTH_STRONGER;
+        gpio_init_struct.gpio_out_type  = GPIO_OUTPUT_PUSH_PULL;
+        gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
+        gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+        gpio_init(GPIOB, &gpio_init_struct);
+		
+		gpio_init_struct.gpio_pins = GPIO_PINS_1;
+		gpio_init(GPIOA, &gpio_init_struct);
+        
+    }
+    else                                                    //标志取消GPIO
+    {
+        gpio_init_struct.gpio_pins = GPIO_PINS_4;
+        gpio_init_struct.gpio_mode = GPIO_MODE_ANALOG;
+        gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+        gpio_init(GPIOA, &gpio_init_struct);
+    }
+	
+}
+
 void LCD_GPIO_Init(int Set)
 {
 #ifdef Exist_LCD
@@ -170,7 +201,7 @@ void DS18B20_GPIO_Init(int Set)
     gpio_default_para_init(&gpio_init_struct);
     if (Set) 
     {
-        crm_periph_clock_enable(CRM_GPIOC_PERIPH_CLOCK, TRUE);       //时钟
+        crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);       //时钟(切换GPIO记得看一眼)
 
         gpio_init_struct.gpio_pins = DS18B20_IO;
         gpio_init_struct.gpio_drive_strength = GPIO_DRIVE_STRENGTH_STRONGER;
@@ -189,3 +220,29 @@ void DS18B20_GPIO_Init(int Set)
 #endif
 }
 
+void DS18B20_IO_Config(int Set)
+{
+#ifdef Exist_DS18B20
+    gpio_init_type gpio_init_struct;
+    gpio_default_para_init(&gpio_init_struct);
+    crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);       //时钟(切换GPIO记得看一眼)
+
+    gpio_init_struct.gpio_pins = DS18B20_IO;
+    gpio_init_struct.gpio_drive_strength = GPIO_DRIVE_STRENGTH_STRONGER;
+    gpio_init_struct.gpio_out_type  = GPIO_OUTPUT_OPEN_DRAIN;
+    if (Set)                                                        //输出
+    {
+        gpio_init_struct.gpio_out_type  = GPIO_OUTPUT_PUSH_PULL;
+        gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
+        gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+
+    }
+    else                                                            //输入
+    {
+        gpio_init_struct.gpio_mode = GPIO_MODE_INPUT;
+        gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+
+    }
+    gpio_init(DS18B20_Clock, &gpio_init_struct);
+#endif
+}

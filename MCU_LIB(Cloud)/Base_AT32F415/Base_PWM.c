@@ -186,6 +186,7 @@ void TIM8_PWM_Start_Init(int arr,int psc,int Set)
 
 void TIM3_PWMx_SetValue(char PWMx,int value)
 {
+#ifdef Exist_PWM
     tmr_type *Temp_TIM = TMR3;
 
     switch (PWMx)
@@ -205,10 +206,12 @@ void TIM3_PWMx_SetValue(char PWMx,int value)
     default:
         break;
     }
+#endif
 }
 
 void TIM4_PWMx_SetValue(char PWMx,int value)
 {
+#ifdef Exist_PWM
     tmr_type *Temp_TIM = TMR4;
 
     switch (PWMx)
@@ -228,10 +231,12 @@ void TIM4_PWMx_SetValue(char PWMx,int value)
     default:
         break;
     }
+#endif
 }
 
 void TIM8_PWMx_SetValue(char PWMx,int value)
 {
+#ifdef Exist_PWM
     tmr_type *Temp_TIM = TMR3;          //这个单片机没有8 
 
     switch (PWMx)
@@ -251,5 +256,6 @@ void TIM8_PWMx_SetValue(char PWMx,int value)
     default:
         break;
     }
+#endif
 }
 

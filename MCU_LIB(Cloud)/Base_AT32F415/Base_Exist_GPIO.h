@@ -30,36 +30,45 @@
                                                                      ————202207.14
  */
 
+#define READ_Config		0
+#define WRITE_Config	1
+
+//User io
+#define User_hot_off() GPIOB->clr = GPIO_PINS_6  
+#define User_hot_on() GPIOB->scr = GPIO_PINS_6   
+#define User_09V() GPIOA->clr = GPIO_PINS_1      
+#define User_12V() GPIOA->scr = GPIO_PINS_1   
+
 #ifdef Exist_LCD
-    #define LCD_DC_Clr() GPIOA->clr = GPIO_PINS_10    //DC_GPIO
-    #define LCD_DC_Set() GPIOA->scr = GPIO_PINS_10   //PA10
-//    #define LCD_RES_Clr()                                     //RES               //Caven 使用硬件复位
-//    #define LCD_RES_Set()
+    #define LCD_DC_L() GPIOA->clr = GPIO_PINS_10    //DC_GPIO
+    #define LCD_DC_H() GPIOA->scr = GPIO_PINS_10   //PA10
+//    #define LCD_RES_L()                                     //RES               //Caven 使用硬件复位
+//    #define LCD_RES_H()
 #endif
 
 #ifdef Exist_OLED
 
-    #define OLED_DC_Clr() GPIOA->clr = GPIO_PINS_10    //DC_GPIO
-    #define OLED_DC_Set() GPIOA->scr = GPIO_PINS_10   //PA10
+    #define OLED_DC_L() GPIOA->clr = GPIO_PINS_10    //DC_GPIO
+    #define OLED_DC_H() GPIOA->scr = GPIO_PINS_10   //PA10
 
-//    #define LCD_RES_Clr()                                     //RES               //Caven 使用硬件复位
-//    #define LCD_RES_Set()
+//    #define LCD_RES_L()                                     //RES               //Caven 使用硬件复位
+//    #define LCD_RES_H()
 #endif
 
 #ifdef Exist_LED
-    #define LED_Clr() GPIOA->clr = GPIO_PINS_4       //LED
-    #define LED_Set() GPIOA->scr = GPIO_PINS_4      //PA04
-    #define LEDR_Clr() GPIOC->clr = GPIO_PINS_2      //PA04
-    #define LEDR_Set() GPIOC->scr = GPIO_PINS_2      //PA04
+    #define LED_L() GPIOA->clr = GPIO_PINS_4       //LED
+    #define LED_H() GPIOA->scr = GPIO_PINS_4      //PA04
+    #define LEDR_L() GPIOC->clr = GPIO_PINS_2      //PA04
+    #define LEDR_H() GPIOC->scr = GPIO_PINS_2      //PA04
 #endif
 
 #ifdef Exist_BZZ
-    #define BZZ_Clr() GPIOB->clr = GPIO_PINS_5    //BZZ
-    #define BZZ_Set() GPIOB->scr = GPIO_PINS_5   //PB05
+    #define BZZ_L() GPIOB->clr = GPIO_PINS_5    //BZZ
+    #define BZZ_H() GPIOB->scr = GPIO_PINS_5   //PB05
 #endif
 
 #ifdef Exist_KEY
-    #define KEY_IN() gpio_input_data_bit_read(GPIOC,GPIO_PINS_13)     //KEY,读
+    #define KEY_R() gpio_input_data_bit_read(GPIOC,GPIO_PINS_13)     //KEY,读
 #endif
 
 #ifdef Exist_HC595
@@ -67,12 +76,12 @@
     #define SHIFT_CLOCK     GPIO_PINS_2         //移动时钟
     #define HC595_Data      GPIO_PINS_3         //数据
     
-    #define LATCH_CLOCK_Clr() GPIOC->clr = LATCH_CLOCK
-    #define LATCH_CLOCK_Set() GPIOC->scr = LATCH_CLOCK
-    #define SHIFT_CLOCK_Clr() GPIOC->clr = SHIFT_CLOCK
-    #define SHIFT_CLOCK_Set() GPIOC->scr = SHIFT_CLOCK
-    #define HC595_Data_Clr() GPIOC->clr = HC595_Data
-    #define HC595_Data_Set() GPIOC->scr = HC595_Data
+    #define LATCH_CLOCK_L() GPIOC->clr = LATCH_CLOCK
+    #define LATCH_CLOCK_H() GPIOC->scr = LATCH_CLOCK
+    #define SHIFT_CLOCK_L() GPIOC->clr = SHIFT_CLOCK
+    #define SHIFT_CLOCK_H() GPIOC->scr = SHIFT_CLOCK
+    #define HC595_Data_L() GPIOC->clr = HC595_Data
+    #define HC595_Data_H() GPIOC->scr = HC595_Data
     
 #endif
 
@@ -96,6 +105,8 @@
 
     #define DS18B20_IO_H() DS18B20_Clock->scr = DS18B20_IO
     #define DS18B20_IO_L() DS18B20_Clock->clr = DS18B20_IO
+
+    #define DS18B20_IO_R() gpio_input_data_bit_read(DS18B20_Clock,DS18B20_IO)     // 读
 #endif
 
 
@@ -108,9 +119,15 @@ void BZZ_GPIO_Init(int Set);
 
 void HC138_GPIO_Init(int Set);
 void HC595_GPIO_Init(int Set);
+
 void DS18B20_GPIO_Init(int Set);
 
 void KEY_GPIO_Init(int Set);
+
+void User_GPIO_Init(int Set);	//!!!!
+
+/*  other    */
+void DS18B20_IO_Config(int Set);
 
 
 #endif

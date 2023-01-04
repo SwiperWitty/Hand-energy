@@ -47,14 +47,14 @@ int main (void)
 			}
 			else
 			{
-				temp_f = ADC_Get_Temperature();
-				printf("p: MCU_Temp %f \r\n",temp_f);
+//				temp_f = ADC_Get_Temperature();
+//				printf("p: MCU_Temp %f \r\n",temp_f);
 				Mode_User.LED.LED_SET(1,DISABLE);
 				User_hot_off();
 				temp_2 = 0;
 				printf("off hot \r\n");
 			}
-			Mode_User.UART.Send_Data(2,CV_UART[2]->UART_RxdBuff,CV_UART[2]->DATA.Length);
+			Mode_User.UART.WAY_Send_Data(2,CV_UART[2]->UART_RxdBuff,CV_UART[2]->DATA.Length);
 			Destroy(CV_UART[2],sizeof(*CV_UART[2])); 
 		}
 		
@@ -105,7 +105,7 @@ void Main_Init(void)
 	
     Mode_Init.UART(2,115200,ENABLE);
 	Mode_Init.KEY(1,ENABLE); 
-    Mode_Init.LCD(ENABLE); 
+//    Mode_Init.LCD(ENABLE); 
 	if(DS18B20_Init (ENABLE) == 1)
 	{
 		printf("p: DS18B20_Init sec !\r\n");
@@ -120,23 +120,21 @@ void Main_Init(void)
 	struct Caven_Color Color;
 	Mode_User.LED.LED_REG(Color,DISABLE);
     Mode_User.Delay.Delay_ms(100);
-    Mode_User.LCD.Show_Picture(0,0,239,240,gImage_kk);
+//    Mode_User.LCD.Show_Picture(0,0,239,240,gImage_kk);
 //	Mode_User.LCD.Show_String(0,12,"1-1234567890abcdefghijklmNOP",WHITE,BLACK,16);
 
-    ADC_Start_Init(ENABLE); 
     Mode_User.Sys_Clock.Set_TIME(SYS_Time.Watch);
 
-    Mode_User.UART.Send_String(2,"s: hello world !\r\n");
+    Mode_User.UART.WAY_Send_String(2,"s: hello world !\r\n");
     printf("p: Nice to meet you >  !\r\n");
     printf("p: Created by Cavendish \r\n");
 	
-	ADC_Get_List(temp_list);
+//	ADC_Get_List();
 	temp_f = temp_list[0];
-	temp_f = temp_f / 4096 * VDDA;
+	temp_f = temp_f / 4096 * ADC_VREF;
 	temp_f = temp_f * VCC_Cfc;
 	printf("p: VCC : %f \r\n", temp_f);
 	temp_f = 4096 - temp_list[1];
-	temp_f = temp_f / 4096 * VDDA;
+	temp_f = temp_f / 4096 * ADC_VREF;
 	printf("p: TEMP : %f \r\n", temp_f);
-	printf("p: MCU : %f  \r\n\r\n", ADC_Get_Temperature());
 }
