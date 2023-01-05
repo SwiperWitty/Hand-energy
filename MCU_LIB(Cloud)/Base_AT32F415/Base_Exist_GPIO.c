@@ -2,7 +2,6 @@
 
 void User_GPIO_Init(int Set)
 {
-	
     gpio_init_type gpio_init_struct;
     gpio_default_para_init(&gpio_init_struct);
     if (Set) 

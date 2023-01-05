@@ -39,16 +39,16 @@ struct _USER_ADC_
 
 #define ADC_Speed ADC_SAMPLETIME_239_5
 
-#define ADC_IO_PA0  ADC_CHANNEL_0
-#define ADC_IO_PA1  ADC_CHANNEL_1
-#define ADC_IO_PA2  ADC_CHANNEL_2
-// #define ADC_IO_PA3  ADC_CHANNEL_3
-// #define ADC_IO_PA4  ADC_CHANNEL_4
-// #define ADC_IO_PA5  ADC_CHANNEL_5
-// #define ADC_IO_PA6  ADC_CHANNEL_6
-// #define ADC_IO_PA7  ADC_CHANNEL_7
-#define ADC_IO_PB0  ADC_CHANNEL_8
-#define ADC_IO_PB1  ADC_CHANNEL_9
+//#define ADC_IO_PA0  ADC_CHANNEL_0
+//#define ADC_IO_PA1  ADC_CHANNEL_1
+//#define ADC_IO_PA2  ADC_CHANNEL_2
+//#define ADC_IO_PA3  ADC_CHANNEL_3
+#define ADC_IO_PA4  ADC_CHANNEL_4
+#define ADC_IO_PA5  ADC_CHANNEL_5
+//#define ADC_IO_PA6  ADC_CHANNEL_6
+//#define ADC_IO_PA7  ADC_CHANNEL_7
+//#define ADC_IO_PB0  ADC_CHANNEL_8
+//#define ADC_IO_PB1  ADC_CHANNEL_9
 #define ADC_Temp    ADC_CHANNEL_16      //温传
 
 #endif

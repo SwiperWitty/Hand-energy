@@ -33,7 +33,6 @@ int main (void)
         Mode_User.Sys_Clock.Get_TIME();
 		if(CV_UART[2]->Rxd_Received)
 		{
-			CV_UART[2]->Rxd_Received = 0;
 			if(CV_UART[2]->UART_RxdBuff[0] == '1')
 			{
 				Mode_User.LED.LED_SET(1,ENABLE);
@@ -47,8 +46,8 @@ int main (void)
 			}
 			else
 			{
-//				temp_f = ADC_Get_Temperature();
-//				printf("p: MCU_Temp %f \r\n",temp_f);
+				temp_f = ADC_Get_Temperature();
+				printf("p: MCU_Temp %f \r\n",temp_f);
 				Mode_User.LED.LED_SET(1,DISABLE);
 				User_hot_off();
 				temp_2 = 0;
@@ -89,7 +88,7 @@ int main (void)
         {temp_1 = 0;}
         
         Mode_User.Delay.Delay_ms(20);
-
+        ADC_Get_List();
     }
 }
 
@@ -101,10 +100,14 @@ void Main_Init(void)
     
     Mode_Init.Sys_Clock(ENABLE);
     Mode_Init.LED(ENABLE);
-	User_GPIO_Init(ENABLE);
-	
+    Mode_Init.KEY(1,ENABLE); 
+    
+    User_GPIO_Init(ENABLE);
+    ADC_Start_Init(ENABLE);
+        
+//	Mode_Init.UART(1,115200,ENABLE);
     Mode_Init.UART(2,115200,ENABLE);
-	Mode_Init.KEY(1,ENABLE); 
+	
 //    Mode_Init.LCD(ENABLE); 
 	if(DS18B20_Init (ENABLE) == 1)
 	{
@@ -129,12 +132,12 @@ void Main_Init(void)
     printf("p: Nice to meet you >  !\r\n");
     printf("p: Created by Cavendish \r\n");
 	
-//	ADC_Get_List();
-	temp_f = temp_list[0];
+	ADC_Get_List();
+	temp_f = Mode_User.USER_ADC.DATA_List[0];
 	temp_f = temp_f / 4096 * ADC_VREF;
 	temp_f = temp_f * VCC_Cfc;
 	printf("p: VCC : %f \r\n", temp_f);
-	temp_f = 4096 - temp_list[1];
+	temp_f = 4096 - Mode_User.USER_ADC.DATA_List[1];
 	temp_f = temp_f / 4096 * ADC_VREF;
 	printf("p: TEMP : %f \r\n", temp_f);
 }

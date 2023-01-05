@@ -7,7 +7,9 @@
 
 static flash_status_type Flash_Addr_Check(int Addr_Start,int Addr_End)
 {
+
     flash_status_type back = FLASH_OPERATE_DONE;
+#ifdef Exist_FLASH
     if((Addr_Start >= FLASH_END) || (Addr_Start < FLASH_START))
     { 
 //        printf("ERROR\r\n"); 
@@ -18,13 +20,15 @@ static flash_status_type Flash_Addr_Check(int Addr_Start,int Addr_End)
 //        printf("ERROR\r\n"); 
         back = FLASH_PROGRAM_ERROR;
     }
+#endif
     return back;
 }
 
 char Flash_Clear_Area(char Area_Start,char Area_End)
 {
+#ifdef Exist_FLASH
     flash_status_type status = FLASH_OPERATE_DONE;
-    
+
     status = Flash_Addr_Check(GET_Area_Addr(Area_Start),GET_Area_Addr(Area_End));
     if(status == FLASH_PROGRAM_ERROR) {return ERROR;}
     
@@ -45,6 +49,9 @@ char Flash_Clear_Area(char Area_Start,char Area_End)
     }
     flash_lock();
     return SUCCESS;
+#endif
+    return ERROR;
+
 }
 
 char Flash_Read_Data (int Addr,void *Data,int Lenght)
@@ -69,6 +76,7 @@ char Flash_Read_Data (int Addr,void *Data,int Lenght)
 
 char Flash_Save_Data(int Addr,const uint16_t *Data,int Lenght)
 {
+#ifdef Exist_FLASH
     uint16_t flash_buf[FLASH_AREA_SIZE];        //缓冲区      而且要
     
     flash_status_type status = FLASH_OPERATE_DONE;
@@ -161,8 +169,10 @@ char Flash_Save_Data(int Addr,const uint16_t *Data,int Lenght)
         flash_lock();
 
     }
-    
     return SUCCESS;
+    
+#endif
+    return ERROR;
 }
 
 
