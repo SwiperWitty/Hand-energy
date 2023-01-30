@@ -17,19 +17,13 @@ Base DP or QC power to Create heat !
 
 （AD画的，keyshot渲染（obj格式））
 
-
-
-![image-20221204181303289](https://raw.githubusercontent.com/SwiperWitty/img/main/img/202212041813361.png)
-
-
-
-![image-20221121001621343](https://raw.githubusercontent.com/SwiperWitty/img/main/img/202211210016584.png)
+![202211201420004](https://gitee.com/Swiper_witty/caven_img/raw/master/img/202301301428120.png)
 
 
 
 keyshot
 
-![image-20221121002221156](https://raw.githubusercontent.com/SwiperWitty/img/main/img/202211210027745.png)
+![202211210022641](https://gitee.com/Swiper_witty/caven_img/raw/master/img/202301301428698.png)
 
 
 
@@ -39,9 +33,7 @@ keyshot
 
 （立创EDA画的，因为有打烊券 入口 [立创硬件社区](https://oshwhub.com/)）
 
-![image-20221121001640229](https://raw.githubusercontent.com/SwiperWitty/img/main/img/202211210016269.png)
-
-
+![202211210016269](https://gitee.com/Swiper_witty/caven_img/raw/master/img/202301301428644.png)
 
 把他们组合起来大功告成了！	快来度过一个温暖的冬天吧（bushi）！
 
